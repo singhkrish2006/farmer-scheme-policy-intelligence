@@ -10,7 +10,8 @@ The survey dataset was verified by the Ethnic Community, Government of Andhra Pr
 | Document | Link |
 |---|---|
 | Complete project report (PDF) | [docs/Complete_Project_Report.pdf](docs/Complete_Project_Report.pdf) |
-| Project presentation & demonstration | [docs/Project_Demonstration.pptx](docs/Project_Demonstration.pptx) |
+| Final project presentation (Google Drive) | [Google Drive folder](https://drive.google.com/drive/folders/1Ea17IGBCi2gmo6G_VSptUSgVGAnb_yEK?usp=drive_link) |
+| Earlier demonstration deck | [docs/Project_Demonstration.pptx](docs/Project_Demonstration.pptx) |
 | Model comparison results | [results/](results/) |
 
 ![Workflow](docs/figures/workflow_n8n.png)
