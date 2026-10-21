@@ -1,0 +1,12 @@
+method,type,seeds,n,accuracy,macro_precision,macro_recall,macro_f1,cohen_kappa,macro_f1_ci95,macro_f1_seed_mean_sd,accuracy_seed_mean_sd,unparsed_replies
+Fine-tuned ModernBERT-base,trained (fine-tuned),5,243,0.835,0.81,0.736,0.765,0.683,0.687 - 0.832,0.750 ± 0.034,0.826 ± 0.020,
+Claude Opus 5.5 (zero-shot),"LLM (prompted, external)",1,243,0.786,0.746,0.787,0.742,0.62,0.676 - 0.801,,,
+LLM Dhenu2-In-Llama3.2-3B-Instruct (3-shot),LLM (prompted),1,243,0.749,0.682,0.746,0.704,0.566,0.63 - 0.766,,,0.0
+SetFit (all-mpnet-base-v2),trained (few-label),5,243,0.84,0.909,0.647,0.675,0.675,0.592 - 0.752,0.685 ± 0.022,0.835 ± 0.016,
+TF-IDF logistic regression,trained baseline,1,243,0.745,0.708,0.618,0.641,0.491,0.562 - 0.718,,,
+Fine-tuned deberta-v3-base,trained (fine-tuned),5,243,0.749,0.838,0.534,0.533,0.481,0.476 - 0.595,0.584 ± 0.080,0.760 ± 0.014,
+LLM Dhenu2-In-Llama3.2-3B-Instruct (zero-shot),LLM (prompted),1,243,0.519,0.445,0.478,0.445,0.208,0.38 - 0.51,,,2.0
+RoBERTa Twitter (zero-shot),zero-shot baseline,1,243,0.506,0.445,0.471,0.439,0.103,0.367 - 0.512,,,
+LLM Qwen2.5-3B-Instruct (3-shot),LLM (prompted),1,243,0.457,0.445,0.472,0.391,0.065,0.317 - 0.458,,,0.0
+LLM Qwen2.5-3B-Instruct (zero-shot),LLM (prompted),1,243,0.3,0.35,0.511,0.321,0.048,0.268 - 0.376,,,0.0
+VADER + agri lexicon,zero-shot baseline,1,243,0.235,0.215,0.296,0.223,-0.144,0.163 - 0.279,,,

@@ -15,7 +15,25 @@ The survey dataset was verified by the Ethnic Community, Government of Andhra Pr
 
 ![Workflow](docs/figures/workflow_n8n.png)
 
-<!-- RESULTS -->
+## Results at a glance
+
+Sentiment models scored on 243 human-labelled test answers (never used for training):
+
+| Model | Type | Accuracy | Macro-F1 |
+|---|---|---|---|
+| **Fine-tuned ModernBERT-base** | fine-tuned encoder (5 seeds) | 0.835 | **0.765** |
+| Claude Opus 5.5 | LLM, zero-shot | 0.786 | 0.742 |
+| Dhenu2 (KissanAI, Indian agriculture) | LLM, 3-shot, 4-bit | 0.749 | 0.704 |
+| SetFit (all-mpnet-base-v2) | few-label (5 seeds) | 0.840 | 0.675 |
+| TF-IDF logistic regression | trained baseline | 0.745 | 0.641 |
+| Fine-tuned DeBERTa-v3-base | fine-tuned encoder (5 seeds) | 0.749 | 0.533 |
+| Dhenu2 | LLM, zero-shot | 0.519 | 0.445 |
+| RoBERTa (Twitter) | pretrained, zero-shot | 0.506 | 0.439 |
+| Qwen2.5-3B-Instruct | LLM, 3-shot, 4-bit | 0.457 | 0.391 |
+| Qwen2.5-3B-Instruct | LLM, zero-shot | 0.300 | 0.321 |
+| VADER + agriculture lexicon | lexicon | 0.235 | 0.223 |
+
+ModernBERT's lead over Claude and SetFit is not statistically significant (exact McNemar test); it is significantly better than all other models. The agriculture-specific Dhenu2 clearly outperforms a general LLM of the same size. Full results: [results/](results/).
 
 **Data availability:** the raw survey, the labelling worksheets and per-farmer outputs contain personal details and are not included in this repository. The code rebuilds every output from the original file.
 

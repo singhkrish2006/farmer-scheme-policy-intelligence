@@ -178,7 +178,8 @@ def llm_predict(test_x, model_name, examples, four_bit=False, dtype="auto"):
         label = parse_label(tokenizer.decode(out[0, prompt["input_ids"].shape[1]:], skip_special_tokens=True))
         unparsed += label is None
         preds.append(label or "Neutral")
-    free_gpu(model)
+    del model, prompt, out  # drop the last references before clearing, or the next LLM cannot fit
+    free_gpu()
     return np.array(preds), unparsed
 
 
