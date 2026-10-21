@@ -40,14 +40,18 @@ ModernBERT's lead over Claude and SetFit is not statistically significant (exact
 ## Folder structure
 
 ```
-data/        Research_farmers_dataset.xlsx — raw survey, never modified
-db/          schema.sql (22 tables + staging + views), queries.sql (analysis queries), .env (local connection settings)
-src/         reusable modules (cleaning, sentiment, ABSA, topics, statistics, evaluation, report helpers)
-scripts/     numbered pipeline, run in order
-output/      everything the scripts generate
-reports/     research paper, statistical report, policy brief, Review 1 deck
-extra/       supporting material outside the main pipeline (viva notes, early pilot files, superseded scripts)
+data/        Research_farmers_dataset.xlsx — raw survey, never modified          (private)
+db/          schema.sql (22 tables + views), queries.sql, .env (local login)     (.env private)
+src/         21 reusable modules (cleaning, sentiment, ABSA, topics, statistics, evaluation, model comparison)
+scripts/     12 numbered pipeline steps, run in order
+notebooks/   Colab GPU notebook for the model comparison
+output/      everything the scripts generate, incl. labelling worksheets         (private)
+results/     aggregate model-comparison results (no per-farmer data)
+docs/        final deliverables: project report PDF, demonstration deck, figures
+reports/     generated statistical report, research paper draft, policy brief, viva notes, earlier review decks (private)
+archive/     superseded scripts, AI pilot files, label backups, old run logs — not used by the pipeline (private)
 ```
+"Private" folders are excluded from Git because they hold personal data or credentials.
 
 ## Setup
 
