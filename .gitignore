@@ -1,0 +1,18 @@
+# Allow-list: everything stays private unless listed below.
+# The raw survey, labelling worksheets and most outputs contain farmers' personal details and are never published.
+/*
+!/.gitignore
+!/README.md
+!/requirements.txt
+!/src/
+!/scripts/
+!/notebooks/
+!/db/
+!/docs/
+!/results/
+
+# never publish credentials
+/db/.env
+
+__pycache__/
+*.pyc
